@@ -3,10 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title> explicando o riolu e suas formas </title>
+    <title> explicando </title>
     <style>
         body{
              font-family: arial, sans-serif;
              background-color: #f4f4f4;
-             
-    
+            }
+            header, footer {
+               background: #333;
+               color: white
+               text-align: center;
+               padding: 10px;
+            }
+           main {
+                margin: 20px 0;
+             }
+    </style>
+</head>
+

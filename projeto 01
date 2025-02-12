@@ -7,6 +7,8 @@
     <style>
         body{
              font-family: arial, sans-serif;
+             margin: 20px;
+             padding: 20px;
              background-color: #f7f7f7;
             }
             header, footer {

@@ -9,11 +9,11 @@
              font-family: arial, sans-serif;
              margin: 20px;
              padding: 20px;
-             background-color: #f7f7f7;
+             background-color: #f4f4f4;
             }
             header, footer {
                background: #333;
-               color: white
+               color: blue
                text-align: center;
                padding: 10px;
             }

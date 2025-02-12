@@ -12,7 +12,7 @@
              background-color: #f4f4f4;
             }
             header, footer {
-               background: #333;
+               background: #777;
                color: blue
                text-align: center;
                padding: 10px;

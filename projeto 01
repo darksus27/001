@@ -26,3 +26,7 @@
     <header>
         <h1> bem vindo </h1>
     </header>
+    <main>
+         <h2> sobre o projeto simples </h2>
+         <p> essa e uma pagina teste </p>
+</main>

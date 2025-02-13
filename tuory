@@ -12,8 +12,8 @@
                background-color: ligthblue;
               }
               header, footer {
-                  background: #333;
-                  color: white;
+                  background: #666;
+                  color: black;
                   text-align: center;
                   padding: 10px;
       </style>
@@ -30,7 +30,7 @@
          <img src="C:\Users\User\Desktop\img\rosto-zoom-arara-azul-grande.jpg" alt="zoom na arara" width="360"
          <h3> "A arara-azul, como o nome sugere, destaca-se pela coloração azul de suas penas, mais precisamente da cor azul-cobalto. Um detalhe interessante é que na parte inferior das asas e da longa cauda a coloração não é azul, como no restante do corpo, e sim preta (veja figura a seguir). Na cabeça, é possível perceber um anel de cor amarela ao redor dos olhos. Além disso, a coloração amarela é percebida nas pálpebras e base da boca. O bico desse animal é grande e curvo, dando a impressão de que esse é maior que o próprio crânio" </h3>
          <img src="C:\Users\User\Desktop\img\arara voando.jpg" alt="arara azul voando" width="300" >
-         <img src="C:\Users\User\Desktop\img\OIP.jpg" alt="arara na arvore" width="300" >
+         <img src="C:\Users\User\Desktop\img\OIP.jpg" alt="arara na arvore" width="600" >
      </main>
 
      <footer>

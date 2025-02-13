@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang= "pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viwerport" content="width=device, initial-scale=1.0">
+    <title> primeiro site </title>
+    <style>
+         body {
+               font-family: arial, sans-serif;
+               margin: 20px;
+               padding: 20px;
+               background-color: #f4f4f4;
+              }
+              header, footer {
+                  background: #333;
+                  color: white;
+                  text-align: center;
+                  padding: 10px;
+      </style>
+</head>
+<body>
+     <header>
+          <h1> bem vindo ao meu site <h1>
+     </header>
+
+     <main>
+         <h2> sobre <h2>
+         <p> essa e uma pagina simples </p>
+     </main>
+
+     <footer>
+           <p> 2025 </p>
+     </footer>
+</body>
+</html>

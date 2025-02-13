@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viwerport" content="width=device, initial-scale=1.0">
-    <title> primeiro site </title>
+    <title> explicando um pouco sobre a arara azul </title>
     <style>
          body {
                font-family: arial, sans-serif;
@@ -20,11 +20,11 @@
 </head>
 <body>
      <header>
-          <h1> bem vindo ao meu site <h1>
+          <h1> <b> arara azul </b> <h1>
      </header>
 
      <main>
-         <h2> sobre <h2>
+         <h2> A arara-azul, também chamada arara-azul-grande, é uma espécie de ave, encontrada no Brasil, que se caracteriza por ser a maior entre os psitacídeos (família Psittacidae), chegando a atingir mais de um metro de comprimento, medindo-se da ponta do bico à ponta da cauda. Essa espécie habita diferentes formações vegetais, sendo encontrada em formações savânicas e até em ambientes de floresta no Brasil, Paraguai e Bolívia. As maiores populações dessa espécie de arara são encontradas no Pantanal. <h2>
          <p> essa e uma pagina simples </p>
          <img src="C:\Users\User\Desktop\img\arara 01.jpg" alt="arara azul" width="300" >
      </main>

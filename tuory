@@ -12,8 +12,8 @@
                background-color: ligthblue;
               }
               header, footer {
-                  background: #777;
-                  color: black;
+                  background: blue;
+                  color: white;
                   text-align: center;
                   padding: 10px;
       </style>
@@ -24,7 +24,7 @@
      </header>
 
      <main>
-         <h3> A <a href="https://mundoeducacao.uol.com.br/biologia/arara.htm"> arara</a> -azul, também chamada arara-azul-grande, é uma espécie de ave, encontrada no Brasil, que se caracteriza por ser a maior entre os psitacídeos (família Psittacidae), chegando a atingir mais de um metro de comprimento, medindo-se da ponta do bico à ponta da cauda. Essa espécie habita diferentes formações vegetais, sendo encontrada em formações savânicas e até em ambientes de floresta no Brasil, Paraguai e Bolívia. As maiores populações dessa espécie de arara são encontradas no Pantanal. </h3>
+         <h3> <p style="font-weight: 400;" A <a href="https://mundoeducacao.uol.com.br/biologia/arara.htm"> arara</a> -azul, também chamada arara-azul-grande, é uma espécie de ave, encontrada no Brasil, que se caracteriza por ser a maior entre os psitacídeos (família Psittacidae), chegando a atingir mais de um metro de comprimento, medindo-se da ponta do bico à ponta da cauda. Essa espécie habita diferentes formações vegetais, sendo encontrada em formações savânicas e até em ambientes de floresta no Brasil, Paraguai e Bolívia. As maiores populações dessa espécie de arara são encontradas no Pantanal.</p> </h3>
          <p> imagens da arara azul </p>
          <img src="C:\Users\User\Desktop\img\arara 01.jpg" alt="arara azul" width="300" >
          <img src="C:\Users\User\Desktop\img\OIP.jpg" alt="arara na arvore" width="300" >

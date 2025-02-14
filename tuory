@@ -6,7 +6,7 @@
     <title> explicando um pouco sobre a arara azul </title>
     <style>
          body {
-             background-color: liner-gradient(to right, #ff7e5f, #feb47b ;
+             background-color: black ;
                font-family: arial, sans-serif;
                margin: 20px;
                padding: 20px;

@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da Página</title>
+    <title>Meu Site</title>
     <style>
-         body {
-               font-family: arial, sans-serif;
-               background-color: #f4f4f4
-              }
-              header {
-                      background: #333;
-                      color: white;
-                      text-align: center
-                      padding: 10px
-                     }
-              header, footer {
-                               backgroun
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-    <h1> caracteristicas da arara azul</h1>
+        <h1>Bem-vindo ao Meu Site</h1>
     </header>
-    <h3> <em> "A arara-azul </em> como o nome sugere, destaca-se pela coloração azul de suas penas, mais precisamente da cor azul-cobalto. Um detalhe interessante é que na parte inferior das asas e da longa cauda a coloração não é azul, como no restante do corpo, e sim preta (veja figura a seguir). Na cabeça, é possível perceber um anel de cor amarela ao redor dos olhos. Além disso, a coloração amarela é percebida nas pálpebras e base da boca. O bico desse animal é grande e curvo, dando a impressão de que esse é maior que o próprio crânio"</h3>
-    <img src="https://s3.amazonaws.com/media.wikiaves.com.br/images/6863/3686254_524aeb34fa6cd229913527bb9c30df0e.jpg" alt="arara azul voando" width="600" >
-    <p> arara azul voando</p>
+
+    <main>
+        <h2>Sobre</h2>
+        <p>Esta é uma página simples criada com HTML e CSS.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

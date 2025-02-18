@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 100vh;
+  background-image: url(https://img.freepik.com/fotos-gratis/linda-manha-no-lago-pang-ung-provincia-de-pang-ung-mae-hong-son-na-tailandia_335224-935.jpg?t=st=1739844845~exp=1739848445~hmac=126b235488b382c49a9d8ec0f0577a0b5093d540837cf317280291033c0115df&w=1800);
+  color: white;
+}
+
+.diario {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 360%;
+  height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 0px;
+  border-radius: 23px;
+  border: 0px solid #ccc;
+  position: relative;
+  top: -70px;
+  left: 390px ;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+button {
+  padding: 15px 15px;
+  background-color: #f2f2f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  top: -70px;
+  left: 600px;
+  width: 900px;
+  background-color: #fcca89;
+  text-decoration: none;
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.anotacoes {
+  margin-top: 30px;
+  position: relative;
+  top: -350PX
+}
+
+.anotacoes div {
+  background-color:transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #efba9c;
+  
+  
+}
+
+.anotacoes h2 {
+  margin-bottom: 15px;
+}

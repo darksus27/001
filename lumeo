@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="diario">
+    <h1>Lumeo</h1>
+
+    <div class="entrada">
+      <textarea id="nota" placeholder="Eternize suas memorias aqui"></textarea>
+      <button onclick="salvarNota()">Salvar</button>
+    </div>
+
+    <div class="anotacoes">
+      <H3>Minhas memorias </H3>
+      <div id="listaAnotacoes"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

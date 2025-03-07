@@ -9,15 +9,68 @@
 </head>
 
 <body>
-	<h1>Catálogo brasil</h1>
+	<header>
+		<h1>Catálogo Pessoal</h1>
+		<div class="search-container">
+			<input type="text" id="searchInput" placeholder="Pesquisar...">
+			<button onclick="searchItems()">Buscar</button>
+		</div>
+	</header>
+
 	<div class="nav-links">
-		<button onclick="showSection('books')" class="active">Livros</button>
+		<button onclick="showSection('home')" class="active">Início</button>
+		<button onclick="showSection('books')">Livros</button>
 		<button onclick="showSection('movies')">Filmes</button>
 		<button onclick="showSection('series')">Séries</button>
 	</div>
 
+	<button class="fab" onclick="scrollToForm()">+</button>
+
+	<!-- Home Section -->
+	<div id="home" class="section active">
+		<h2>Em Destaque</h2>
+		<div class="featured-grid">
+			<div class="featured-item book">
+				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                     data-src="book"
+                     class="lazy"
+                     alt="Livro em Destaque">
+				<div class="featured-content">
+					<h3>Livro Exemplo</h3>
+					<button onclick="showSection('books')">Ver mais</button>
+				</div>
+			</div>
+			<div class="featured-item movie">
+				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                     data-src="movie"
+                     class="lazy"
+                     alt="Filme em Destaque">
+				<div class="featured-content">
+					<h3>Filme Exemplo</h3>
+					<button onclick="showSection('movies')">Ver mais</button>
+				</div>
+			</div>
+			<div class="featured-item serie">
+				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                     data-src="serie"
+                     class="lazy"
+                     alt="Série em Destaque">
+				<div class="featured-content">
+					<h3>Série Exemplo</h3>
+					<button onclick="showSection('series')">Ver mais</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search Results -->
+	<div id="searchResults" class="section">
+		<h2>Resultados da Pesquisa</h2>
+		<ul id="searchList" class="item-list"></ul>
+	</div>
+
 	<!-- Livros Section -->
-	<div id="books" class="section active">
+	<div id="books" class="section">
 		<div class="form-container">
 			<h2>Adicionar Livro</h2>
 			<div class="form-group">
@@ -62,7 +115,7 @@
 									<label>Imagem:</label>
 									<input type="file" id="bookImage" accept="image/*">
             </div>
-									<button onclick="addBook()">Registrar Livro</button>
+									<button onclick="addBook()" class="add-button">Registrar Livro</button>
 								</div>
 								<ul id="bookList" class="item-list"></ul>
 							</div>
@@ -113,7 +166,7 @@
 													<label>Imagem:</label>
 													<input type="file" id="movieImage" accept="image/*">
             </div>
-													<button onclick="addMovie()">Registrar Filme</button>
+													<button onclick="addMovie()" class="add-button">Registrar Filme</button>
 												</div>
 												<ul id="movieList" class="item-list"></ul>
 											</div>
@@ -172,7 +225,7 @@
 																			<label>Imagem:</label>
 																			<input type="file" id="serieImage" accept="image/*">
             </div>
-																			<button onclick="addSerie()">Registrar Série</button>
+																			<button onclick="addSerie()" class="add-button">Registrar Série</button>
 																		</div>
 																		<ul id="serieList" class="item-list"></ul>
 																	</div>

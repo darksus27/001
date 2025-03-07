@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catálogo de Mídia</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1>Catálogo brasil</h1>
+	<div class="nav-links">
+		<button onclick="showSection('books')" class="active">Livros</button>
+		<button onclick="showSection('movies')">Filmes</button>
+		<button onclick="showSection('series')">Séries</button>
+	</div>
+
+	<!-- Livros Section -->
+	<div id="books" class="section active">
+		<div class="form-container">
+			<h2>Adicionar Livro</h2>
+			<div class="form-group">
+				<label>Título:</label>
+				<input type="text" id="bookTitle" required>
+            </div>
+				<div class="form-group">
+					<label>Autor:</label>
+					<input type="text" id="bookAuthor" required>
+            </div>
+					<div class="form-group">
+						<label>Gênero:</label>
+						<select id="bookGenre">
+                    <option value="Ficção">Ficção</option>
+                    <option value="Não-Ficção">Não-Ficção</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Romance">Romance</option>
+                </select>
+					</div>
+					<div class="form-group">
+						<label>Total de Capítulos:</label>
+						<input type="number" id="bookChapters" min="1">
+            </div>
+						<div class="form-group">
+							<label>Capítulos em Português:</label>
+							<input type="number" id="bookPortugueseChapters" min="0">
+            </div>
+							<div class="form-group">
+								<label>Número de Páginas:</label>
+								<input type="number" id="bookPages" min="1">
+            </div>
+								<div class="form-group">
+									<label>Plataformas Disponíveis:</label>
+									<select id="bookPlatforms" multiple>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Google Books">Google Books</option>
+                    <option value="Apple Books">Apple Books</option>
+                    <option value="Loja Física">Loja Física</option>
+                </select>
+								</div>
+								<div class="form-group">
+									<label>Imagem:</label>
+									<input type="file" id="bookImage" accept="image/*">
+            </div>
+									<button onclick="addBook()">Registrar Livro</button>
+								</div>
+								<ul id="bookList" class="item-list"></ul>
+							</div>
+
+							<!-- Filmes Section -->
+							<div id="movies" class="section">
+								<div class="form-container">
+									<h2>Adicionar Filme</h2>
+									<div class="form-group">
+										<label>Título:</label>
+										<input type="text" id="movieTitle" required>
+            </div>
+										<div class="form-group">
+											<label>Diretor:</label>
+											<input type="text" id="movieDirector" required>
+            </div>
+											<div class="form-group">
+												<label>Gênero:</label>
+												<select id="movieGenre">
+                    <option value="Ação">Ação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Terror">Terror</option>
+                </select>
+											</div>
+											<div class="form-group">
+												<label>Ano:</label>
+												<input type="number" id="movieYear" min="1900" max="2024">
+            </div>
+												<div class="form-group">
+													<label>Opções de Dublagem:</label>
+													<select id="movieDubbing" multiple>
+                    <option value="pt-br">Português (BR)</option>
+                    <option value="en">Inglês</option>
+                    <option value="es">Espanhol</option>
+                </select>
+												</div>
+												<div class="form-group">
+													<label>Plataformas Disponíveis:</label>
+													<select id="moviePlatforms" multiple>
+                    <option value="Netflix">Netflix</option>
+                    <option value="Amazon Prime">Amazon Prime</option>
+                    <option value="Disney+">Disney+</option>
+                    <option value="HBO Max">HBO Max</option>
+                </select>
+												</div>
+												<div class="form-group">
+													<label>Imagem:</label>
+													<input type="file" id="movieImage" accept="image/*">
+            </div>
+													<button onclick="addMovie()">Registrar Filme</button>
+												</div>
+												<ul id="movieList" class="item-list"></ul>
+											</div>
+
+											<!-- Séries Section -->
+											<div id="series" class="section">
+												<div class="form-container">
+													<h2>Adicionar Série</h2>
+													<div class="form-group">
+														<label>Título:</label>
+														<input type="text" id="serieTitle" required>
+            </div>
+														<div class="form-group">
+															<label>Criador:</label>
+															<input type="text" id="serieCreator" required>
+            </div>
+															<div class="form-group">
+																<label>Gênero:</label>
+																<select id="serieGenre">
+                    <option value="Drama">Drama</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Documentário">Documentário</option>
+                </select>
+															</div>
+															<div class="form-group">
+																<label>Temporadas:</label>
+																<input type="number" id="serieSeasons" min="1">
+            </div>
+																<div class="form-group">
+																	<label>Total de Capítulos:</label>
+																	<input type="number" id="serieChapters" min="1">
+            </div>
+																	<div class="form-group">
+																		<label>Capítulos em Português:</label>
+																		<input type="number" id="seriePortugueseChapters" min="0">
+            </div>
+																		<div class="form-group">
+																			<label>Opções de Dublagem:</label>
+																			<select id="serieDubbing" multiple>
+                    <option value="pt-br">Português (BR)</option>
+                    <option value="en">Inglês</option>
+                    <option value="es">Espanhol</option>
+                </select>
+																		</div>
+																		<div class="form-group">
+																			<label>Plataformas Disponíveis:</label>
+																			<select id="seriePlatforms" multiple>
+                    <option value="Netflix">Netflix</option>
+                    <option value="Globoplay">Globoplay</option>
+                    <option value="Disney+">Disney+</option>
+                    <option value="Prime Video">Prime Video</option>
+                </select>
+																		</div>
+																		<div class="form-group">
+																			<label>Imagem:</label>
+																			<input type="file" id="serieImage" accept="image/*">
+            </div>
+																			<button onclick="addSerie()">Registrar Série</button>
+																		</div>
+																		<ul id="serieList" class="item-list"></ul>
+																	</div>
+
+																	<script src="script.js"></script>
+</body>
+
+</html>

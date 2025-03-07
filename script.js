@@ -18,8 +18,22 @@ function showSection(sectionId) {
   document.querySelectorAll('.nav-links button').forEach(btn => {
     btn.classList.remove('active');
   });
-  document.getElementById(sectionId).classList.add('active');
-  event.target.classList.add('active');
+
+  if (sectionId !== 'searchResults') {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('searchList').innerHTML = '';
+  }
+
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.classList.add('active');
+    if (sectionId !== 'searchResults') {
+      document.querySelector(`.nav-links button[onclick*='${sectionId}']`)?.classList.add('active');
+    }
+  }
+
+  document.querySelector('.fab').style.display =
+    (sectionId === 'home' || sectionId === 'searchResults') ? 'none' : 'block';
 }
 
 async function addBook() {
@@ -132,3 +146,87 @@ function clearForm(sectionId) {
   const form = document.querySelector(`#${sectionId} .form-container`);
   form.reset();
 }
+
+function searchItems() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const results = [];
+
+  books.forEach(book => {
+    if (book.title.toLowerCase().includes(searchTerm) ||
+      book.author.toLowerCase().includes(searchTerm)) {
+      results.push({ ...book, type: 'book' });
+    }
+  });
+
+  movies.forEach(movie => {
+    if (movie.title.toLowerCase().includes(searchTerm) ||
+      movie.director.toLowerCase().includes(searchTerm)) {
+      results.push({ ...movie, type: 'movie' });
+    }
+  });
+
+  series.forEach(serie => {
+    if (serie.title.toLowerCase().includes(searchTerm) ||
+      serie.creator.toLowerCase().includes(searchTerm)) {
+      results.push({ ...serie, type: 'serie' });
+    }
+  });
+
+  if (searchTerm) {
+    showSection('searchResults');
+    renderSearchResults(results);
+  }
+}
+
+function renderSearchResults(results) {
+  const list = document.getElementById('searchList');
+  list.innerHTML = '';
+
+  results.forEach(item => {
+    const li = document.createElement('li');
+    li.className = `item-card ${item.type}`;
+
+    const imageHtml = item.image ?
+      `<img src="${item.image}" class="item-image">` :
+      '<div class="item-image placeholder"></div>';
+
+    let content = `
+            ${imageHtml}
+            <div class="item-content">
+                <strong>${item.title}</strong>
+        `;
+
+    if (item.type === 'book') {
+      content += `<br>Autor: ${item.author}`;
+    } else if (item.type === 'movie') {
+      content += `<br>Diretor: ${item.director}`;
+    } else if (item.type === 'serie') {
+      content += `<br>Criador: ${item.creator}`;
+    }
+
+    content += '</div>';
+    li.innerHTML = content;
+    list.appendChild(li);
+  });
+}
+
+function scrollToForm() {
+  const activeSection = document.querySelector('.section.active');
+  if (activeSection) {
+    const form = activeSection.querySelector('.form-container');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const featuredImages = document.querySelectorAll('.lazy');
+  featuredImages.forEach(img => {
+    const type = img.getAttribute('data-src');
+    const items = window[`${type}s`];
+    if (items.length > 0) {
+      img.src = items[0].image || 'placeholder.jpg';
+    }
+  });
+});
